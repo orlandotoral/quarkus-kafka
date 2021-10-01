@@ -14,6 +14,5 @@ public class MovieConsumer {
     @Incoming("movies-in")
     public void receive(Record<Integer, String> record) {
         logger.infof("Got a movie: %d - %s", record.key(), record.value());
-        System.out.println(String.join("","Got a movie: %d - %s", record.key().toString(), record.value()));
     }
 }
